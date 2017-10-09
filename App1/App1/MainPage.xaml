@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1"
+             x:Class="App1.MainPage">
+    <StackLayout Orientation= "Vertical">
+        <Label Text= "Ingrese Nombre"
+            VerticalOptions = "Center"
+            HorizontalOptions = "Center"
+            FontSize = "40"/>
+       <Entry x:Name="NameEntry" Placeholder="Nombre"/>
+        <Picker x:Name="NumPicker" SelectedIndex="{Binding Industry}" HorizontalOptions="FillAndExpand">
+            <Picker.Items>
+                <x:String>3</x:String>
+                <x:String>5</x:String>
+                <x:String>10</x:String>
+            </Picker.Items>
+        </Picker>    
+        <Button Text="Comenzar" Clicked="Handle_Clicked"></Button>
+    </StackLayout>
+</ContentPage>
